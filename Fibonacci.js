@@ -25,15 +25,31 @@
 	}
 
 
-	function fibonacci(n) {
-		if ( n < 1 ) { return "Input must be a number greater than 0.";
-		} else if ( n == 1 ) {
-			return 0; 
-		} else if ( n < 3 ) {
-				return 1;
-		} else if ( n >= 3 ) {
-				return fibonacci(n-1)+fibonacci(n-2);
-		}
+	// function fibonacci(n) {
+	// 	if ( n < 1 ) { return "Input must be a number greater than 0.";
+	// 	} else if ( n == 1 ) {
+	// 		return 0; 
+	// 	} else if ( n < 3 ) {
+	// 			return 1;
+	// 	} else if ( n >= 3 ) {
+	// 			return fibonacci(n-1)+fibonacci(n-2);
+	// 	}
+	// }
+
+
+    // // _.memoize function
+    // function fibonacci(n){
+    //     return n < 2 ? n:fibonacci(n-1) + fibonacci(n-2);
+    // }
+
+	function fibonacci(n, res = [0, 1, 1]) {
+    	if (res[n]) {
+        	return res[n];
+    	}
+
+    	res[n] = fibonacci(n - 1, res) + fibonacci(n - 2, res);
+    	return res[n];
 	}
+	
 	
   
