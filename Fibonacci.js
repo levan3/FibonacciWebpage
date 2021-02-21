@@ -17,7 +17,7 @@ function fibonacci(n){
 		} else if ( n < 3 ) {
 				return 1;
 		} else if ( n >= 3 ) {
-				return fibonacci(n-1)+fib(n-2);
+				return fibonacci(n-1)+fibonacci(n-2);
 		}
 	}
 }
