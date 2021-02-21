@@ -1,4 +1,9 @@
 var button = document.getElementById("reveal-button");
+var fibonacciform = document.getElementById("fibonacciform");
+
+fibonacciform.onsubmit = function() {
+    return false;
+}
 
 button.onclick = function() {
 var position = document.getElementById("position");
