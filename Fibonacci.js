@@ -1,8 +1,13 @@
 var button = document.getElementById("reveal-button");
+
+button.onclick = function() {
 var position = document.getElementById("position");
 var answer = document.getElementById("answer");
 
 var result = fibonacci(position);
+
+answer.innerHTML = result;
+}
 
 function fibonacci(n){
     {
