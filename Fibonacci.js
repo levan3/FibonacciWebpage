@@ -1,10 +1,15 @@
 
-	var button = document.getElementById("reveal");
-	
+	//identify and declare variable for button 
+    var button = document.getElementById("reveal");
+	//identify and declare variable for form
 	var form = document.getElementById("fibonacciform");
+
+    //validation
 	form.onsubmit = function() {
 		return false;
 	}
+
+    //onclick
 
 	button.onclick = function() {
     	
@@ -13,7 +18,7 @@
 		//declare var output for fibonacci position
 		var answer = document.getElementById("answer");
 		var answer2 = document.getElementById("answer2");
-		//declare var result
+		//declare var result, call fibonacci function
 		var result = fibonacci(position);
 		
 		
@@ -25,23 +30,7 @@
 	}
 
 
-	// function fibonacci(n) {
-	// 	if ( n < 1 ) { return "Input must be a number greater than 0.";
-	// 	} else if ( n == 1 ) {
-	// 		return 0; 
-	// 	} else if ( n < 3 ) {
-	// 			return 1;
-	// 	} else if ( n >= 3 ) {
-	// 			return fibonacci(n-1)+fibonacci(n-2);
-	// 	}
-	// }
-
-
-    // // _.memoize function
-    // function fibonacci(n){
-    //     return n < 2 ? n:fibonacci(n-1) + fibonacci(n-2);
-    // }
-
+    //Recursive-array fibonacci function
 	function fibonacci(n, res = [0, 1, 1]) {
     	if (res[n]) {
         	return res[n];
